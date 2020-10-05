@@ -27,7 +27,7 @@ public class SHT3x {
     let i2c: I2C
     
     // Initialize the I2C bus and reset the sensor to prepare for the following commands.
-    init(_ i2c: I2C) {
+    public init(_ i2c: I2C) {
         self.i2c = i2c
         writeCommand(Command.softReset)
         sleep(ms: 10)
